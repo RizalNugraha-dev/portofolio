@@ -1,0 +1,200 @@
+body {
+    background: #1c1c1c;
+    color: #a19f9f;
+    font-family: 'Arial', sans-serif;
+}
+
+nav.navbar {
+    background-color: #2e2d2d !important;
+    border-bottom: 2px solid #f39c12 !important;
+    
+}
+
+nav.navbar .navbar-brand, nav.navbar .nav-link {
+    color: #e4e0e0 !important;
+}
+
+nav.navbar .nav-link:hover {
+    color: #f39c12 !important;
+}
+.navbar-toggler {
+    background-color: #f39c12;
+    border-color: #e4e0e0;
+}
+.navbar-toggler:hover {
+    background-color: #ecb651;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    color: #f39c12;
+}
+
+footer {
+    background-color: #2b2b2b;
+    color: #7b7575;
+}
+#portofolio {
+    background: linear-gradient(135deg, #424242, #1c1c1c);
+    color: #dcdcdc;
+}
+#portofolio img {
+    border: 2px solid #f39c12;
+    transition: transform 0.3s;
+}
+
+#portofolio img:hover {
+    transform: scale(1.05);
+}
+#contact{
+    background: linear-gradient(135deg, #424242, #1c1c1c);
+    color: #dcdcdc;
+}
+#language img {
+    width: 100%; /* Gambar menyesuaikan lebar kolom */
+    height: 150px; /* Tetapkan tinggi yang seragam */
+    object-fit: contain; /* Menjaga proporsi gambar */
+    border-radius: 10px;
+}
+#language img {
+    margin-bottom: 10px;
+}
+.btn-primary {
+    background-color: #f39c12;
+    border-color: #f39c12;
+}
+
+.btn-primary:hover {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+.btn-outline-secondary {
+    color: #d4d4d4;
+    border-color: #f39c12;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #f39c12;
+    color: #282828;
+}
+
+form .form-control {
+    background-color: #2b2b2b;
+    color: #a7a5a5;
+    border: 1px solid #f39c12;
+}
+
+form .form-control::placeholder {
+    color: #7f8c8d;
+}
+
+form .form-control:focus {
+    background-color: #333333;
+    color: #cecccc;
+    border-color: #f39c12;
+    box-shadow: none;
+}
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #f39c12;
+    margin: 20px auto;
+}
+#home {
+    background: linear-gradient(135deg, #424242, #1c1c1c); /* Gradien gelap */
+    color: #dcdcdc; /* Warna teks */
+}
+
+#home h1 {
+    margin-top: 20px;
+}
+#welcome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1c1c1c;
+    color: #f39c12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#welcome-overlay.hidden {
+    animation: fadeOut 1s forwards;
+}
+#welcome-text {
+    opacity: 0;  /* Mulai dengan transparansi */
+    animation: slideInFromLeft 2s forwards;  /* Animasi bergerak dari kiri */
+}
+/* Animasi untuk teks muncul */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px); /* Teks dimulai lebih rendah */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);  /* Muncul ke posisi normal */
+}
+/* Styling untuk gambar di About Me */
+#about img {
+    max-width: 300px;        /* Pastikan gambar mengikuti ukuran kontainer */
+    max-height: 300px;
+    width: 20vw;
+    height: 20vw;           /* Menjaga rasio proporsional gambar */
+    object-fit: cover;
+    border-radius: 100% !important;     /* Membuat gambar berbentuk bulat */
+    border: 3px solid #f39c12; /* Tambahkan border untuk estetika */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+#about img:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+@media (max-width: 768px) {
+    #about .row {
+        text-align: center; /* Pada layar kecil, teks dan gambar akan berada di tengah */
+    }
+
+    #about img {
+        margin-top: 20px; /* Jarak antara teks dan gambar pada layar kecil */
+    }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .scroll-animate {
+        transform: translateY(30px); /* Lebih kecil animasi untuk layar kecil */
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);  /* Mulai dari luar kiri */
+        opacity: 0;  /* Mulai tidak terlihat */
+    }
+    100% {
+        transform: translateX(0);  /* Bergerak ke posisi semula */
+        opacity: 1;  /* Menjadi terlihat */
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
